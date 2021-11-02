@@ -1,0 +1,172 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    cursor: default;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.container {
+    width: 80% !important;
+    height: 100%;
+    margin: auto;
+    transition: all .2s;
+}
+
+.containerpluld {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    transition: all .2s;
+}
+
+.mobile-bar {
+    display: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: all .2s;
+}
+
+p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    text-transform: uppercase;
+    display: block;
+    margin: auto;
+    border: none;
+    color: white;
+    width: 15.5rem;
+    height: 3rem;
+    font-weight: 500;
+    transition: all .2s;
+}
+
+button:hover {
+    background-color: #eee;
+    color: #359aff;
+}
+
+.col-1,
+.col-1-1,
+.col-1-2,
+.col-2-1,
+.col-3,
+.col-4,
+.col-5,
+.col-7 {
+    transition: all .2s;
+    width: 100%;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+}
+
+.col-1-1 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.col-1-2 {
+    grid-template-columns: 1fr 2fr;
+}
+
+.col-2-1 {
+    grid-template-columns: 2fr 1fr;
+}
+
+.col-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.col-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.col-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.col-7 {
+    grid-template-columns: 5rem 5rem 6.5rem 5.5rem 5.5rem 5.5rem 6rem;
+}
+
+@media only screen and (max-width:1023px) and (min-width:740px) {
+    .container {
+        width: 90% !important;
+    }
+    .mb-80 {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width:739px) {
+    .slidermenu {
+        animation: ease .5s slidermenu forwards;
+    }
+    .mb-80 {
+        width: 90%;
+        margin: auto;
+    }
+    .mb-2 {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    .container {
+        width: 95% !important;
+        margin: auto;
+    }
+    .col-1-1,
+    .col-1-2,
+    .col-2-1,
+    .col-3,
+    .col-4 {
+        grid-template-columns: 1fr;
+        grid-row-gap: 4rem;
+    }
+    .col-7 {
+        grid-template-columns: 1fr;
+    }
+    .mobile {
+        display: block;
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        width: 10rem;
+        background: black;
+        transform: translateX(110%);
+    }
+    .mobile-bar {
+        display: block;
+        grid-column: 2/3;
+        align-self: center;
+        font-size: 3rem;
+    }
+    .mobile-menu {
+        grid-template-columns: 1fr 1fr;
+    }
+    .active-mb {
+        border-bottom: none;
+        border-left: solid white 4px;
+    }
+}
