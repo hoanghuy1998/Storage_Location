@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Document</title>
+
+    <style>
+        #root {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 32px;
+        }
+        
+        .post-list {
+            width: 300px;
+            border: solid black 1px;
+            border-radius: 4px;
+            background-color: aquamarine;
+            color: brown;
+            text-align: center;
+            padding: 4px;
+        }
+        
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="root"></div>
+    <div id="form"></div>
+    
+    <script type="text/babel">
+    const setStyle={
+        width:'300px',
+        border:'none',
+        borderBottom:'solid #eee 1px',
+        
+        height:'32px',
+        padding:'4px',
+        fontSize:'16px',
+       textTransform:'capplicase'
+
+    }
+    const setFormItem={
+        display:'block'
+    }
+    const setLabel={
+        textTransform:'capitalize',
+        marginRight:'8px'
+    }
+    const setForm={
+        display:'block',
+        border:'solid black 1px',
+        borderRadius:'4px',
+        padding:'8px',
+        backgroundColor:'white',
+        marginBottom:'16px'
+    }
+    const setDiv={
+        display:'grid',
+        gridTemplateColumns:'1fr 1fr',
+        gridGap:'32px'
+    }
+        
+     function List({data,children}){
+         return(
+             <ul>
+                {data.map((...props)=>children(...props))}
+             </ul>
+         )
+     }   
+    
+     function App(){
+         const cars=["honda","lixic","camry","fortuner","langruser"]
+         return(
+             <List data={cars}>
+                 {(item,index)=><li key={index}>{item}</li>}
+             </List>
+         )
+     }
+    ReactDOM.render(<App/>,document.querySelector('#form'));
+
+    </script>
+</body>
+
+</html>
