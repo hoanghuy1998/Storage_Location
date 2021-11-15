@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Student Demo</title>
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="plugins/fontawesome-free/css/all.min.css" rel="stylesheet"/>
+	<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Student Management</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Major</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Student</a>
+        </li>
+      </ul>
+	  <ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="#">welcome to ... </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i></a>
+			</li>
+		</ul>
+    </div>
+  </div>
+</nav>    
+    <div class="container mt-4">
+        <div class="card border-primary bt-5px">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="card-title">Student <small class="text-muted">list</small></h3>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal"><i class="fas fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover mb-0 border-primary">
+                        <thead class="table-primary border-primary">
+                            <tr>
+                                <th style="width: 50px;" class="text-center">#</th>
+								<th>Student Id</th>
+                                <th>Full name</th>
+								<th style="width:50px">Gender</th>
+								<th>Phone</th>
+								<th>Email</th>
+                                <th style="width: 80px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="text-center">1</th>
+                                <td>01-03-9384</td>
+								<td>Trần Minh Tâm</td>
+								<td class="text-center"><i class="fas fa-male text-primary fa-lg"></i></td>
+								<td>0935875636</td>
+								<td>tamtm@yahoo.com</td>
+                                <td class="text-center">
+                                    <a href="#"><i class="fas fa-edit text-primary"></i></a>
+                                    <a href="#"><i class="fas fa-trash-alt text-danger"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">2</th>
+								<td>01-03-9344</td>
+                                <td>Nguyễn Thị Thanh</td>
+								<td class="text-center"><i class="fas fa-female text-warning fa-lg"></i></td>
+								<td>0937938573</td>
+								<td>thanhnt@yahoo.com</td>
+                                <td class="text-center">
+                                    <a href="#"><i class="fas fa-edit text-primary"></i></a>
+                                    <a href="#"><i class="fas fa-trash-alt text-danger"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">3</th>
+								<td>01-04-9846</td>
+                                <td>Lê Thanh Tuấn</td>
+								<td class="text-center"><i class="fas fa-male text-primary fa-lg"></i></td>
+								<td>0918373635</td>
+								<td>tuanlt@yahoo.com</td>
+                                <td class="text-center">
+                                    <a href="#"><i class="fas fa-edit text-primary"></i></a>
+                                    <a href="#"><i class="fas fa-trash-alt text-danger"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">4</th>
+								<td>01-04-8363</td>
+                                <td>Đinh La Si</td>
+								<td class="text-center"><i class="fas fa-male text-primary fa-lg"></i></td>
+								<td>0917628363</td>
+								<td>sidl@yahoo.com</td>
+                                <td class="text-center">
+                                    <a href="#"><i class="fas fa-edit text-primary"></i></a>
+                                    <a href="#"><i class="fas fa-trash-alt text-danger"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New Student</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row mb-3">
+                      <label for="txtId" class="col-sm-2 col-form-label required">Student Id</label>
+                      <div class="col-sm col-lg-5">
+                        <input type="text" class="form-control" id="txtId" placeholder="Student Id">
+                      </div>
+                    </div>
+					<div class="row mb-3">
+                      <label for="txtLastName" class="col-sm-2 col-form-label required">Full name</label>
+                      <div class="col-sm-10 col-lg-5">
+                        <input type="text" class="form-control" id="txtLastName" placeholder="Last name">
+                      </div>
+					  <div class="col-sm">
+                        <input type="text" class="form-control" id="txtFirstName" placeholder="First name">
+                      </div>
+                    </div>
+					<div class="row mb-3">
+                      <label for="radMale" class="col-sm-2 col-form-label required">Gender</label>
+                      <div class="col-sm">
+						<div class="col-form-label">
+                        <div class="form-check form-check-inline">
+						  <input class="form-check-input" type="radio" name="Gender" id="radMale" value="1">
+						  <label class="form-check-label" for="radMale">Male</label>
+						</div>
+						<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="radio" id="radFeMale" name="Gender" value="0">
+						  <label class="form-check-label" for="radFeMale">Female</label>
+						</div>
+						</div>
+                      </div>
+                    </div>
+					<div class="row mb-3">
+                      <label for="txtPhone" class="col-sm-2 col-form-label required">Phone</label>
+                      <div class="col-sm col-lg-5">
+                        <input type="tel" class="form-control" id="txtPhone" placeholder="Phone number">
+                      </div>
+                    </div>
+					<div class="row">
+                      <label for="txtEmail" class="col-sm-2 col-form-label">Email</label>
+                      <div class="col-sm">
+                        <input type="email" class="form-control" id="txtEmail" placeholder="Email address">
+                      </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

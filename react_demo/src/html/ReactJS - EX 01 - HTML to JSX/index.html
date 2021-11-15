@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Class</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- header area -->
+    <header class="top">
+      <div class="container mt-30 header">
+        <div class="row">
+          <div class="col-3-4">
+            <h2 class="ml-15"><img src="img/staff-icon.png" style="margin-bottom: -8px" /> <span>Sale System</span></h2>
+          </div>
+          <div class="col-1-4 text-right">
+            <a href="#" class="log-out">Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-1-5 left">
+            <nav>
+              <ul class="menu">
+                <li>
+                  <span>Trainer</span>
+                  <ul>
+                    <li><a href="#">Trainer List</a></li>
+                    <li><a href="#">Create a Trainer</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <span>Teams</span>
+                  <ul>
+                    <li><a href="#">Team List</a></li>
+                    <li><a href="#">Create a Team</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <span>Trainees</span>
+                  <ul>
+                    <li><a href="#">Trainees</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <span>Courses</span>
+                  <ul>
+                    <li><a href="#">Courses</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <span>Syllabus</span>
+                  <ul>
+                    <li><a href="#">Syllabus</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-4-5">
+            <div class="content">
+              <h3 class="title">CREATE CLASS</h3>
+              <table class="table">
+                <tr>
+                  <td style="width: 25%"><label for="txtId">Class No.</label></td>
+                  <td><input type="text" id="txtId" /></td>
+                </tr>
+                <tr>
+                  <td><label for="txtClassName">Class Name</label></td>
+                  <td><input id="txtClassName" type="text" style="width: 100%"/></td>
+                </tr>
+                <tr>
+                  <td><label for="txtStartDate">Start Date</label></td>
+                  <td><input id="txtStartDate" type="date" /></td>
+                </tr>
+                <tr>
+                  <td><label for="txtEndDate">End Date</label></td>
+                  <td><input id="txtEndDate" type="date" /></td>
+                </tr>
+				<tr>
+                  <td><label>Class Is Open</label></td>
+                  <td>
+					<span><input type="radio" name="isOpen" value="1" id="radOpen" /> <label for="radOpen">Yes</label></span>
+					<span class="ml-15"><input type="radio" name="isOpen" value="0" id="radClose" /> <label for="radClose">No</label></span>
+				  </td>
+                </tr>
+                <tr>
+                  <td>Level</td>
+                  <td><input type="range" id="rngLevel" name="Level" min="0" max="5" style="width: 100%" /></td>
+                </tr>
+				<tr>
+                  <td>Note</td>
+                  <td><textarea rows="2" style="width: 100%"></textarea></td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <button class="btn btn-primary" id="btnSave" type="button">Save</button>
+                    <button class="btn btn-primary" type="button">Back</button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      function showValue() {
+        var range = document.getElementById("rngLevel");
+        console.log("Range value", range.value);
+
+        var className = document.getElementById("txtClassName");
+        console.log("Class name: ", className.value);
+      }
+    </script>
+  </body>
+</html>
